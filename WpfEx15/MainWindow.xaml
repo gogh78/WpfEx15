@@ -1,0 +1,466 @@
+﻿<Window x:Class="WpfEx15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfEx15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentReader x:Name="docReader">
+            <FlowDocument>                
+                <Paragraph FontSize="25" FontWeight="Bold">
+                    <Hyperlink NavigateUri="https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%82%D0%BE%D0%BD"> Бетон</Hyperlink>
+                    <Floater Width="250" HorizontalAlignment="Right">
+                        <BlockUIContainer>
+                            <Image Source="Data/11.jpg"/>
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+                <Paragraph>
+                    <Bold>Бетон</Bold>
+                    <Underline>(от фр. béton)</Underline> — искусственный каменный строительный материал, получаемый в результате формования и затвердевания рационально подобранной, тщательно перемешанной и уплотнённой смеси из минерального
+                    <Italic>(например, цемент)</Italic> или органического вяжущего вещества, крупного или мелкого заполнителей, воды. В ряде случаев может иметь в составе специальные добавки, а также не содержать воды
+                    <Italic>(например, асфальтобетон)</Italic>.
+                </Paragraph>
+                <Paragraph>
+                    В строительстве наиболее широко используют бетоны, изготовленные на цементах или других неорганических вяжущих. Эти бетоны обычно затворяют водой. Цемент и вода являются активными составляющими бетона; в результате реакции между ними образуется цементный камень, скрепляющий зерна заполнителя в монолит.
+                </Paragraph>
+
+                <Paragraph FontWeight="Bold">
+                    Классификация и виды бетона
+                </Paragraph>
+                <Paragraph>
+                    <Span Background="Yellow">
+                    Согласно
+                    <Run Foreground="Red">ГОСТ 25192-2012 «Бетоны. Классификация и общие технические требования»</Run> и
+                    <Run Foreground="Red">ГОСТ 7473-2010 «Смеси бетонные. Технические условия»</Run> , классификация бетонов
+                    <Italic>(за исключением бетонов на битумных вяжущих — асфальтобетонов)</Italic> производится по основному назначению, виду вяжущего вещества, виду заполнителей, структуре и условиям твердения:
+</Span>
+                </Paragraph>
+                <List MarkerStyle="Square">
+                    <ListItem>
+                        <Paragraph>
+                            По назначению различают:
+                        </Paragraph>
+                        <List MarkerStyle="Disc">
+                            <ListItem>
+                                <Paragraph>
+                                    бетоны обычные <Italic>(для промышленных и гражданских зданий)</Italic>
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    специальные: 
+                                </Paragraph>
+                                <List>
+                                    <ListItem>
+                                        <Paragraph>
+                                            — гидротехнические
+                                        </Paragraph>                                        
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            — дорожные
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            — теплоизоляционные
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            — декоративные
+                                        </Paragraph>
+                                    </ListItem>
+                                </List>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    бетоны специального назначения:
+                                    <Italic>(химически стойкие, жаростойкие, звукопоглощающие, для защиты от ядерных излучений и др.)</Italic>.
+                                </Paragraph>
+                            </ListItem>
+                        </List>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            По виду вяжущего вещества различают: 
+                        </Paragraph>
+                        <List MarkerOffset="25" MarkerStyle="Box">
+                            <ListItem>
+                                <Paragraph>
+                                    цементные
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    известковые
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    силикатные
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    гипсовые
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    шлаковые <Italic>(шлакощелочные и др.)</Italic>
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    специальные
+                                    <Italic>(полимербетоны, бетоны на магнезиальном вяжущем)</Italic>
+                                </Paragraph>
+                            </ListItem>
+                        </List>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            По виду заполнителей различают бетоны на:
+                        </Paragraph>
+                        <List>
+                            <ListItem>
+                                <Paragraph>
+                                    плотных заполнителях
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    пористых заполнителях
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    специальных заполнителях
+                                </Paragraph>
+                            </ListItem>
+                        </List>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            По структуре различают бетоны:
+                        </Paragraph>
+                        <List>
+                            <ListItem>
+                                <Paragraph>
+                                    плотной структуры
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    поризованной структуры
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    ячеистой структуры <Italic>(ячеистый бетон)</Italic>
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    крупнопористой структуры
+                                </Paragraph>
+                            </ListItem>
+                        </List>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            По условиям твердения бетоны подразделяют на: 
+                        </Paragraph>
+                        <List>
+                            <ListItem>
+                                <Paragraph>
+                                    твердеющие в естественных условиях
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    в условиях тепловлажностной обработки при атмосферном давлении
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    в условиях тепловлажностной обработки при давлении выше атмосферного
+                            <Italic>(автоклавного твердения)</Italic>.
+                                </Paragraph>
+                            </ListItem>
+                        </List>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            По средней плотности бетоны подразделяют на:
+                        </Paragraph>
+                        <List MarkerStyle="Circle" MarkerOffset="30">
+                            <ListItem>
+                                <Paragraph>
+                                    особо тяжёлые <Italic>(плотность свыше 2500 кг/м³)</Italic> — баритовый, магнетитовый, лимонитовый
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    тяжёлые <Italic>(плотность 2000—2500 кг/м³)</Italic>
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    облегчённые <Italic>(плотность 1800—2200 кг/м³)</Italic>
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    лёгкие <Italic>(плотность 800—2000 кг/м³)</Italic> — керамзитобетон, пенобетон, газобетон, пемзобетон, арболит, вермикулитовый, перлитовый
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                   особо лёгкие <Italic>(плотность менее 800 кг/м³)</Italic> — полистиролбетон.
+                                </Paragraph>
+                            </ListItem>
+                        </List>
+                    </ListItem>                    
+                </List>
+                <Paragraph FontWeight="Bold">
+                    Классификация бетона по прочности
+                </Paragraph>
+                <Section FontFamily="Verdana" FontStyle="Oblique">
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="0.9*" />
+                        <TableColumn Width="*"/>
+                        <TableColumn Width="1.5*"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph Padding="10">
+                                    Класс бетона по прочности
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Padding="10">
+                                    Ближайшая марка бетона по прочности
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Padding="10">
+                                    Современное международное обозначение
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B7,5
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М100
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    —
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                   B10 
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М150
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С8/10
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B12,5
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М150
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С10/12,5
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B15
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М200
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С12/15
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B20
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М250
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С16/20
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B22,5
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М300
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С18/22,5
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B25
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М350
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С20/25
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B27,5
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М350
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С22/27,5
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B30
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М400
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С25/30
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B35
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М450
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С28/35
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    B40
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    М550
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    С32/40
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                </Section>
+                <BlockUIContainer>
+                    <StackPanel>
+                        <TextBlock Text="Нажми, если понравилась статья"/>
+                        <Button Content="Нравится!"/>
+                    </StackPanel>
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentReader>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Открыть" Width="100" Click="Button_Click_2"/>
+            <Button Content="Сохранить" Width="100" Click="Button_Click_1"/>
+            <Button Content="Очистить" Width="100" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
